@@ -2,12 +2,12 @@
 
 ### Installing the project
 1. Go to the directory on your machine where you want to store your project repositories: `cd ~/projects` (or something similar)
-2. Clone this repository: `git clone https://github.com/joshuago78/labcat.git`
-3. Change directory: `cd labcat`
-4. Create a virtual environment: `python3 -m venv ENV`
+2. Clone this repository: `git clone https://github.com/nichatpratik/Library_management_system.git`
+3. Change directory: `cd library`
+4. I have created a virtual environment: `python3 -m venv ENV`
 5. Activate the environment `source ENV/bin/activate`
-6. Install the dependencies: `pip install -r requirements.txt`
-7. Change directories to the django project: `cd labcat`
+6. Install the dependencies: `pip install -r requirements.txt` 
+7. Change directories to the django project: `cd library`
 
 Now you are all set to run the Django management commands
 
