@@ -1,4 +1,5 @@
 # Library_management_system
+A simple library management system for displaying the online catalog for the library. 
 
 ### Installing the project
 1. Go to the directory on your machine where you want to store your project repositories: `cd ~/projects` (or something similar)
