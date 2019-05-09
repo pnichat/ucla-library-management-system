@@ -7,6 +7,12 @@ class Genre(models.Model):
 	def __str__(self):
 		return self.name
 
+class Language(models.Model):
+	name = models.CharField(max_length=200, help_text='Enter the language')
+
+	def __str__(self):
+		return self.name
+
 from django.urls import reverse
 
 class Book(models.Model):
@@ -69,9 +75,4 @@ class Author(models.Model):
         """String for representing the Model object."""
         return '{0} ({1})'.format(self.last_name,self.first_name)
 
-class Language(models.Model):
-	name = models.CharField(max_length=200, help_text='Enter the language')
-
-	def __str__(self):
-		return self.name
 
