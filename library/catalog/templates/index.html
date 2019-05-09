@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+	<h1>Library Catalog HOME PAGE</h1>
+	<p>Lets see some statistics!</p>
+	<ul>
+		<li><strong>Total Books:</strong> {{ num_books }}</li>
+		<li><strong>Instances (Copies):</strong> {{ num_instances }}</li>
+		<li><strong>Instances (Copies) Available</strong> {{ num_instances_available }}</li>
+		<li><strong>Authors:</strong> {{ num_authors }}</li>
+	</ul>
+{% endblock %}
