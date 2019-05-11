@@ -3,13 +3,13 @@
 <head>
 	{% block title %} <title>UCLA Library Catalog</title>{% endblock %}
 	{% load static %}
-  	<link rel = "stylesheet" href = "{% static 'catalog/styles.css' %}">
+  	
 	<meta charset="utf-8">
   	<meta name="viewport" content="width=device-width, initial-scale=1">
   	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
   	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
   	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-
+  	<link rel = "stylesheet" href = "{% static 'catalog/styles.css' %}">
   	
 </head>
 
@@ -36,10 +36,9 @@
     <div class="col-sm-3 sidenav">
       <h4>UCLA Library Catalog (Beta)</h4>
       <ul class="nav nav-pills nav-stacked">
-        <li class="active"><a href="{% url 'index' %}">Home</a></li>
-        <li><a href="#section2">View Books</a></li>
-        <li><a href="#section3">Add Books</a></li>
-        <li><a href="#section3">Authors</a></li>
+        <li><a href="{% url 'index' %}">Home</a></li>
+        <li><a href="{% url 'books' %}">View Books</a></li>
+        <li><a href="{% url 'authors' %}">View Authors</a></li>
       </ul><br>
       <div class="input-group">
         <input type="text" class="form-control" placeholder="Help Box">

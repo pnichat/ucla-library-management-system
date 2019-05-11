@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+	<h1>Book List</h1>
+	<p>Here are all the books in the library:</p>
+	{% if book_list %}
+	<ul>
+		{% for book in book_list %}
+		<li>
+			<a href="{{ book.get_absolute_url}}">{{ book.title}}</a> ({{book.author}})
+		</li>
+		{% endfor %}
+	</ul>
+	{% else %}
+	<p>Library has no books yet. Please try again in a short while.</p>
+	{% endif %}
+{% endblock %}
