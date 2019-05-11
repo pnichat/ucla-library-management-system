@@ -1,28 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	{% block title %} <title>Library Catalog</title>{% endblock %}
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
+	{% block title %} <title>UCLA Library Catalog</title>{% endblock %}
 	{% load static %}
+  	<link rel = "stylesheet" href = "{% static 'catalog/styles.css' %}">
+	<meta charset="utf-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 
-	<link rel="stylesheet" href="{% static 'css/styles.css' %}">
+  	
 </head>
 
 <body>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li><a href="#">YRL</a></li>
+        <li><a href="#">CS Dept</a></li>
+        <li><a href="#">INF STD</a></li>
+        <li><a href="#">Music</a></li>
+        <li><a href="#">Powell</a></li>
+        <li><a href="#">Biomed</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
 <div class="container-fluid">
-	<div class="row">
-		<div class="col-sm-2">
-			{% block sidebar %}
-			<ul class="sidebar-nav">
-          	<li><a href="{% url 'index' %}">Home</a></li>
-          	<li><a href="">All books</a></li>
-          	<li><a href="">All authors</a></li>
-        	</ul>
-     		{% endblock %}
-      	</div>
-     <div class="col-sm-10 ">{% block content %}{% endblock %}</div>
-	</div>
+  <div class="row content">
+    <div class="col-sm-3 sidenav">
+      <h4>UCLA Library Catalog (Beta)</h4>
+      <ul class="nav nav-pills nav-stacked">
+        <li class="active"><a href="{% url 'index' %}">Home</a></li>
+        <li><a href="#section2">View Books</a></li>
+        <li><a href="#section3">Add Books</a></li>
+        <li><a href="#section3">Authors</a></li>
+      </ul><br>
+      <div class="input-group">
+        <input type="text" class="form-control" placeholder="Help Box">
+        <span class="input-group-btn">
+          <button class="btn btn-default" type="button">
+            <span class="glyphicon glyphicon-search"></span>
+          </button>
+        </span>
+      </div>
+    </div>
+  
+<div class="container-fluid text-center">    
+  <div class="row content">
+    <div class="col-sm-8 text-left"> {% block content %}{% endblock %} </div>
+  </div>
 </div>
+<!-- Footer -->
+<footer class="page-footer font-small blue">
+
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-3">© 2019 Copyright:
+    <a href="https://github.com/nichatpratik/Library_management_system"> Pratik Nichat</a>
+  </div>
+  <!-- Copyright -->
+
+</footer>
+<!-- Footer -->
+
 </body>
 </html>
