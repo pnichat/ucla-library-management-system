@@ -26,7 +26,12 @@
         <li><a href="#">Biomed</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      	{% if user.is_authenticated %}
+      	<li><a>Hello {{user.get_username}}</a></li>
+        <li><a href="{% url 'logout' %}?next={{request.path}}"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
+        {% else %}
+        <li><a href="{% url 'login' %}?next={{request.path}}"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+        {% endif %}
       </ul>
     </div>
   </div>
@@ -61,6 +66,7 @@
   <!-- Copyright -->
   <div class="footer-copyright text-center py-3">© 2019 Copyright:
     <a href="https://github.com/nichatpratik/Library_management_system"> Pratik Nichat</a>
+    {% block footercontent %} {% endblock %}
   </div>
   <!-- Copyright -->
 
