@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+	<h1>Contact the librarian</h1>
+	<p>Please leave out your info:</p>
+	<form action="" method="post">
+		{% csrf_token %}
+		<table>
+			{{form.as_table}}
+		</table>
+		<input type="submit" value="Submit">
+	</form>
+	{% if success %}
+	<div> SUCCESS! </div>
+	{% endif %}
+
+{% endblock %}

@@ -25,7 +25,7 @@ SECRET_KEY = 'a=!!771q2to4ga6bt(4(0z9-k@+$396-e*r+$&l3b_@wkj*-&o'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['library3104248805.herokuapp.com', '127.0.0.1']
+ALLOWED_HOSTS = ['library3104248805.herokuapp.com', '127.0.0.1', 'localhost']
 
 
 # Application definition
@@ -143,3 +143,7 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 import dj_database_url 
 prod_db  =  dj_database_url.config(conn_max_age=500)
 DATABASES['default'].update(prod_db)
+
+CONTACT_EMAIL = 'nichatpratik@gmail.com'
+EMAIL_HOST = 'localhost'
+EMAIL_PORT = 1025

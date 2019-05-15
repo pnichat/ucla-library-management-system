@@ -44,3 +44,27 @@ class AuthorListView(generic.ListView):
 
 class AuthorDetailView(generic.DetailView):
 	model = Author
+
+from catalog.forms import ContactForm
+from django.core.mail import send_mail
+from django.views.generic import FormView, TemplateView
+from django.conf import settings
+class ContactView(FormView):
+	template_name = 'catalog/contact.html'
+	form_class = ContactForm
+
+	def form_valid(self, form):
+		subject = form.cleaned_data['subject']
+		message = form.cleaned_data['message']
+		sender = form.cleaned_data['email']
+		first_name = form.cleaned_data['first_name']
+		last_name = form.cleaned_data['last_name']
+		receiver = settings.CONTACT_EMAIL
+		send_mail(subject, message, sender, [receiver])
+		success = 'Message "{}" sent successfully'.format(message)
+		context = {
+			'form': ContactForm,
+			'success': success,
+		}
+		return render(self.request, 'catalog/contact.html', context)
+
