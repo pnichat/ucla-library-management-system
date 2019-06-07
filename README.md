@@ -28,7 +28,7 @@ Now you are all set to run the Django management commands
 3) 6 views - HomePage (index), BookList, BookDetailView, AuthorDetailView, ContactView. 6 Templates wrt to the views and a base template.
 4) One contact us form with template.
 5) Used Bootstrap along with my own CSS styles to style the pages.
-6)Included hyperlinks in the base template (Navigation panel) for good navigable website.
+6) Included hyperlinks in the base template (Navigation panel) for good navigable website.
 7) Used Developed and customized Django admin site to accept data (Data creation) as well as display the data (list view).
 
 Bonus features:
