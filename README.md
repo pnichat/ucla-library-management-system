@@ -20,3 +20,18 @@ Now you are all set to run the Django management commands
 - `python manage.py test catalog` runs the test suite in the `catalog/tests.py` file
 - `python manage.py makemigrations` checks for changes to your models and makes a migration file
 - `python manage.py migrate` converts migration files to SQL and implements the changes in the database
+
+## Library Management System - Library Catalog
+
+1) 5 models - Book, Author, BookInstance, Genre and Language
+2) Book and author models are connected - foreign key. Book and Genre are connected using a many to many connection. Book and Language is connected - foreign key.
+3) 6 views - HomePage (index), BookList, BookDetailView, AuthorDetailView, ContactView. 6 Templates wrt to the views and a base template.
+4) One contact us form with template.
+5) Used Bootstrap along with my own CSS styles to style the pages.
+6)Included hyperlinks in the base template (Navigation panel) for good navigable website.
+7) Used Developed and customized Django admin site to accept data (Data creation) as well as display the data (list view).
+
+Bonus features:
+1) Deployed the website on Heroku: https://library3104248805.herokuapp.com/
+2) Developed a login and logout feature to authenticate the users.
+3) Included session management - tracing visitor's activity on the homepage to show how many times a particular user (not necessary logged in) visited the website.
